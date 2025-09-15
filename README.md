@@ -41,7 +41,7 @@ streamlit run app.py
 ## Workflow
 Here is a Workflow diagram:
 
-<img src="workflow.png" alt="App Screenshot" width="300" height="200">
+<img src="workflow.png" alt="App Screenshot" width="300" height="600">
 
 
 
