@@ -12,7 +12,7 @@ A Streamlit-based tool for annotating LLM-generated text with various quality me
 ### Step 1: Clone the Repository
 ```bash
 git clone <your-repository-url>
-cd evals_automation
+cd eval_tagging_interface
 ```
 ### Step 2: Install dependencies:
 ```bash
@@ -31,8 +31,6 @@ database=dev
 port=24316
 
 [api_keys]
-openai_api_key = sk-your_openai_key...
-google_api_key = AIzaSy...your_google_key
 plivo_auth_id = MAMDHH...your_plivo_id
 plivo_auth_token = ZDFiZ...your_plivo_token
 ```
