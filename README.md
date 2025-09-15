@@ -41,7 +41,7 @@ streamlit run app.py
 ## Workflow
 Here is a Workflow diagram:
 
-![App Screenshot](screenshot.png)
+![App Screenshot](Untitled diagram _ Mermaid Chart-2025-09-11-123618.png)
 
 
 ## Features
