@@ -4,27 +4,46 @@ A Streamlit-based tool for annotating LLM-generated text with various quality me
 
 ## Project Structure
 
-- `app.py`: Main application file
-- `config.py`: Configuration settings and constants
-- `data_handler.py`: Data loading and saving operations
-- `ui_components.py`: Streamlit UI components
-- `requirements.txt`: Project dependencies
+- `eval_tagging_interface.py`: Main application file
+- `config.ini`: Configuration settings and constants
 
 ## Setup
 
-1. Install dependencies:
+### Step 1: Clone the Repository
+```bash
+git clone <your-repository-url>
+cd evals_automation
+```
+### Step 2: Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+### Step 3: Configure Credentials
+All secrets are managed in `config.ini`. Open the file and fill in your credentials for each service.
 
-2. Prepare your input data:
-   - Create a CSV file named `eval_tag_input.csv`
-   - The CSV should contain at least a 'text' column with the content to annotate
+**Example `config.ini`:**
+```ini
+[rds-datawarehouse]
+hostname=de-warehouse.ciqpn8ajz11z.ap-south-1.rds.amazonaws.com
+username=samvadini_user
+password=your_db_password
+database=dev
+port=24316
 
-3. Run the application:
+[api_keys]
+openai_api_key = sk-your_openai_key...
+google_api_key = AIzaSy...your_google_key
+plivo_auth_id = MAMDHH...your_plivo_id
+plivo_auth_token = ZDFiZ...your_plivo_token
+```
+### Step 4: Run the application:
 ```bash
 streamlit run app.py
-```
+
+### Step 4: Set Up the Database
+The `schema.sql` file contains the command to create the `samvadini.llm_call_analysis` table. Connect to your PostgreSQL database and run the script. You can use a tool like `psql`:
+```bash
+psql -h <hostname> -p <port> -U <username> -d <database> -f schema.sql
 
 ## Features
 
