@@ -34,14 +34,15 @@ port=24316
 plivo_auth_id = MAMDHH...your_plivo_id
 plivo_auth_token = ZDFiZ...your_plivo_token
 ```
-### Step 4: Run the application:
-```bash
-streamlit run app.py
-
 ### Step 4: Set Up the Database
 The `schema.sql` file contains the command to create the `samvadini.llm_call_analysis` table. Connect to your PostgreSQL database and run the script. You can use a tool like `psql`:
 ```bash
 psql -h <hostname> -p <port> -U <username> -d <database> -f schema.sql
+```
+### Step 5: Run the application:
+```bash
+streamlit run app.py
+```
 
 ## Features
 
